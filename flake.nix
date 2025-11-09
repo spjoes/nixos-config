@@ -25,15 +25,29 @@
     # use "nixos", or your hostname as the name of the configuration
     # it's a better practice than "default" shown in the video
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+
+      vm = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-          ./hosts/default/configuration.nix
+          ./hosts/vm/configuration.nix
           inputs.catppuccin.nixosModules.catppuccin
           inputs.spicetify-nix.nixosModules.default
           inputs.home-manager.nixosModules.default
         ];
       };
+
+      alaska = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/alaska/configuration.nix
+          inputs.catppuccin.nixosModules.catppuccin
+          inputs.spicetify-nix.nixosModules.default
+          inputs.home-manager.nixosModules.default
+        ];
+      };
+
+      # TODO: Add desktop configuration
+
     };
   };
 }

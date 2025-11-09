@@ -1,23 +1,16 @@
 { config, pkgs, inputs, ... }:
 
 {
+
+  imports = [
+    ../../modules/home/common.nix # Home Manager common modules
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "joey";
   home.homeDirectory = "/home/joey";
 
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name = "Joey";
-        email = "joeykerp@gmail.com";
-      };
-    };
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
-  };
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -218,10 +211,4 @@
   #
   #  /etc/profiles/per-user/joey/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    # EDITOR = "emacs";
-  };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }
