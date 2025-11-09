@@ -4,9 +4,13 @@
 These are the configuration files for my NixOS setup(s).
 
 ## Install
-1) ```git clone https://git.aserver.online/Joey/nixos-config.git ~/.dotfiles```
+1)
+```
+git clone https://git.aserver.online/Joey/nixos-config.git ~/.dotfiles
+```
 
-2) ```sudo nixos-rebuild switch --flake ~/.dotfiles/#[host]```
+2)
+```
+sudo nixos-rebuild switch --flake ~/.dotfiles/#[host]
+```
 > Note: "[host]" here should be replaced with any defined host (currently "vm" and "alaska")
-
-3) Done!
