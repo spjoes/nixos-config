@@ -1,7 +1,6 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
-
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "joey";
@@ -148,13 +147,41 @@
 
   programs.fastfetch.enable = true;
 
+  programs.spicetify =
+  let
+    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+  in
+  {
+    enable = true;
+    enabledExtensions = with spicePkgs.extensions; [
+      fullAlbumDate
+      volumePercentage
+      # CoverAmbience
+      # quickaddtoplaylist
+      # quickQueue
+      # tracktags
+      # playlistlabels
+      # spicylyrics
+      shuffle # shuffle+ (special characters are sanitized out of extension names)
+    ];
+    enabledSnippets = with spicePkgs.snippets; [
+      hideNowPlayingViewButton
+      modernScrollbar
+      ''
+      .main-actionBar-exploreButton { display: none !important; }
+      ''
+    ];
+    theme = spicePkgs.themes.catppuccin;
+    colorScheme = "mocha";
+  };
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    # pkgs.hello
-    pkgs.prismlauncher
+    # hello
+    prismlauncher
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
