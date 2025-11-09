@@ -4,6 +4,9 @@
 
   imports = [
     ../../modules/home/common.nix # Home Manager common modules
+
+    # Application modules
+    ../../modules/home/apps/firefox.nix # Firefox module
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
