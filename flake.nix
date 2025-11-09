@@ -32,7 +32,6 @@
           inputs.catppuccin.nixosModules.catppuccin
           inputs.spicetify-nix.nixosModules.default
           inputs.home-manager.nixosModules.default
-          { nixpkgs.overlays = [ inputs.nur.overlays.default ]; }
         ];
       };
     };

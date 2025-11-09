@@ -129,18 +129,8 @@
           tampermonkey
         ];
 
-       #  settings = {
-         #  "${ublock-origin.addonId}" = {
-           #  force = true;
-           #  settings = {
-             # userSettings = rec {
-             #   advancedUserEnabled = true;
-             #   uiAccentCustom = true;
-             #   uiAccentCustom0 = "#FFFFFF";
-             # };
-           # };
-         # };
-        # };
+        # Figure out how to declare the settings for uBlock Origin, Tampermonkey, and Stylus
+        # Also figure out how to make these extensions auto-enable without having to manually enable them from Firefox.
       };
     };
   };
@@ -156,7 +146,7 @@
     enabledExtensions = with spicePkgs.extensions; [
       fullAlbumDate
       volumePercentage
-      # CoverAmbience
+      # CoverAmbience - Made pull request to add this to spicetify-nix
       # quickaddtoplaylist
       # quickQueue
       # tracktags

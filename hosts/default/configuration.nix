@@ -6,10 +6,7 @@
 
 {
 
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ ./hardware-configuration.nix ]; # Include the results of the hardware scan.
 
   home-manager.sharedModules = [
     inputs.catppuccin.homeModules.catppuccin
@@ -101,8 +98,6 @@
     ];
   };
 
-
- nixpkgs.overlays = [ inputs.nur.overlays.default ];
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     useGlobalPkgs = true;
@@ -112,10 +107,12 @@
     };
   };
 
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  nixpkgs.overlays = [ inputs.nur.overlays.default ];
+
+  # Enable Steam
   programs.steam.enable = true;
 
   # List packages installed in system profile. To search, run:
