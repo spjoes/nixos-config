@@ -1,8 +1,8 @@
 # Machines
 
-This directory contains config for each of my machines that I have configured NixOS for so far.
+This directory contains configs for each of my NixOS machines.
 
 Here you'll find:
 
-* alaska - (WIP) my laptop
-* default - me learning linux
+* [alaska](./alaska) - My WIP laptop configuration
+* [vm](./vm) - My VirtualBox VM I have been using to learn NixOS
