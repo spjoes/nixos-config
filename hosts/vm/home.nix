@@ -48,7 +48,7 @@
     enabledExtensions = with spicePkgs.extensions; [
       fullAlbumDate
       volumePercentage
-      # CoverAmbience - Made pull request to add this to spicetify-nix
+      coverAmbience
       # quickaddtoplaylist
       # quickQueue
       # tracktags
