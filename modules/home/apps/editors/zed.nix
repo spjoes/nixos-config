@@ -9,6 +9,6 @@
 
       # Icons
       "catppuccin-icons"
-    ]
+    ];
   };
 }
