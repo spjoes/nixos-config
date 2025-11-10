@@ -9,7 +9,7 @@
       eamodio.gitlens # GitLens
       jnoortheen.nix-ide # Nix IDE
       wakatime.vscode-wakatime # Wakatime
-      coderabbit.coderabbit-vscode # Coderabbit
+      # coderabbit.coderabbit-vscode # need to make a pr for this
     ];
   };
 }
