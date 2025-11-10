@@ -36,7 +36,7 @@
   programs.fastfetch.enable = true;
   programs.rofi = {
     enable = true;
-    plugins = [ pkgs.rofi-file-browser-extended ];
+    plugins = [ pkgs.rofi-file-browser ];
     extraConfig = {
       "show-icons" = true;
 
