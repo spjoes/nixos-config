@@ -8,6 +8,7 @@
     # Application modules
     ../../modules/home/apps/browsers # Module to import browsers
     ../../modules/home/apps/editors # Module to import editors
+    ../../modules/home/apps/media # Module to import media
   ];
 
 
@@ -32,11 +33,13 @@
   };
 
   programs.ghostty.enable = true;
-  programs.obs-studio.enable = true;
   programs.fastfetch.enable = true;
 
   editors.cursor.enable = true; # cfg from editors module
+  
   browsers.firefox.enable = true; # cfg from browsers module
+
+  media.obs.enable = true; # cfg from media module
 
   programs.spicetify =
   let
