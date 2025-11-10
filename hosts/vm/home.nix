@@ -36,6 +36,18 @@
   programs.fastfetch.enable = true;
   programs.rofi = {
     enable = true;
+    plugins = [ pkgs.rofi-file-browser-extended ];
+    extraConfig = {
+      "show-icons" = true;
+
+      # Aliases so you can type "apps:" and "files:"
+      modi = "apps:drun,files:filebrowser,windows:window,run:run,combi";
+
+      # Put both into the same search field
+      "combi-modi" = "apps,files";
+      "combi-hide-mode-prefix" = false;
+      "display-combi" = "Search";
+    };
   };
 
   editors.cursor.enable = true; # cfg from editors module
