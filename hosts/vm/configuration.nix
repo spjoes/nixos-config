@@ -48,7 +48,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --theme 'text=white;container=black;border=cyan;title=brightcyan;greet=magenta;prompt=green;input=brightgreen;action=blue;button=brightyellow;time=brightred' --cmd startplasma-wayland";
+        command = "${pkgs.tuigreet}/bin/tuigreet --cmd startplasma-wayland";
         user = "greeter";
       };
     };
