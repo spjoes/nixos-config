@@ -5,5 +5,11 @@
   programs.vscode = {
     enable = true;
     package = pkgs.code-cursor;
+    extensions = with pkgs.vscode-extensions; [
+      eamodio.gitlens # GitLens
+      jnoortheen.nix-ide # Nix IDE
+      wakatime.vscode-wakatime # Wakatime
+      coderabbit.coderabbit-vscode # Coderabbit
+    ];
   };
 }
