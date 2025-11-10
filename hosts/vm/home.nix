@@ -34,33 +34,33 @@
 
   programs.ghostty.enable = true;
   programs.fastfetch.enable = true;
+  programs.rofi =
   let
     rasi = config.lib.formats.rasi;
     L = rasi.mkLiteral;
-  in {
-    programs.rofi = {
-      enable = true;
-      extraConfig = {
-        modi = "drun";
-        show-icons = true;
-        display-drun = "Search Apps";
-        drun-display-format = "{name}";
+  in
+  {
+    enable = true;
+    extraConfig = {
+      modi = "drun";
+      show-icons = true;
+      display-drun = "Search Apps";
+      drun-display-format = "{name}";
+    };
+    theme = {
+      listview = {
+        columns       = 6;            # number of columns
+        lines         = 3;            # number of rows
+        flow          = L "horizontal";   # row-first ordering
+        spacing       = L "12px";     # gap between tiles
+        fixed-columns = true;         # keep grid shape
+        fixed-height  = true;
       };
-      theme = {
-        listview = {
-          columns       = 6;            # number of columns
-          lines         = 3;            # number of rows
-          flow          = L "horizontal";   # row-first ordering
-          spacing       = L "12px";     # gap between tiles
-          fixed-columns = true;         # keep grid shape
-          fixed-height  = true;
-        };
-        element = {
-          orientation = L "vertical";
-        };
-        "element-text" = { horizontal-align = "0.5em"; };
-        "element-icon".size = L "2.4em";
+      element = {
+        orientation = L "vertical";
       };
+      "element-text" = { horizontal-align = "0.5em"; };
+      "element-icon".size = L "2.4em";
     };
   };
 
