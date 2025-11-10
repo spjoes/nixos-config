@@ -25,10 +25,7 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  virtualisation.virtualbox.guest = {
-    enable = true;
-    clipboard = true;
-  };
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -41,20 +38,17 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-
   services.desktopManager.plasma6.enable = true;
 
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --cmd startplasma-wayland";
+        command = "${pkgs.tuigreet}/bin/tuigreet --remember --cmd startplasma-wayland";
         user = "greeter";
       };
     };
   };
-
-  # programs.hyprland.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {

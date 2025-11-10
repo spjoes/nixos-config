@@ -38,8 +38,17 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.tuigreet}/bin/tuigreet --remember --cmd startplasma-wayland";
+        user = "greeter";
+      };
+    };
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -89,7 +98,10 @@
     };
   };
 
-  nixpkgs.overlays = [ inputs.nur.overlays.default ];
+  nixpkgs.overlays = [
+    inputs.nur.overlays.default
+    inputs.nix-vscode-extensions.overlays.default
+  ];
 
   # Enable Steam
   programs.steam.enable = true;
