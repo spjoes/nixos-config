@@ -34,17 +34,42 @@
 
   programs.ghostty.enable = true;
   programs.fastfetch.enable = true;
-  programs.rofi = {
+  # programs.rofi = {
+  #   enable = true;
+  #   plugins = [ pkgs.rofi-file-browser ];
+  #   extraConfig = {
+  #     modi = "combi";
+  #     combi-modi = "drun,file-browser-extended,window";
+  #     show-icons = true;
+  #     display-combi = "Search";
+  #     drun-display-format = "{name}";
+  #   };
+  # };
+
+  programs.rofi = let
+    rofiFiles = pkgs.writeShellScriptBin "rofi-files" ''
+      #!/usr/bin/env bash
+      set -euo pipefail
+      case "${ROFI_RETV:-0}" in
+        0)  printf '\0prompt\x1ffiles: type query, then Enter\n'; echo "Type a query and press Enter…" ;;
+        2)  q="$1"; printf '\0prompt\x1ffiles: %s\n' "$q"
+            if command -v plocate >/dev/null; then plocate -i --limit 200 -- "$q" | grep -v '^/nix/store/';
+            else locate -i -l 200 -- "$q" | grep -v '^/nix/store/'; fi ;;
+        1)  xdg-open "$1" >/dev/null 2>&1 & ;;
+      esac
+    '';
+  in {
     enable = true;
-    plugins = [ pkgs.rofi-file-browser ];
     extraConfig = {
-      modi = "combi";
-      combi-modi = "drun,file-browser-extended,window";
-      show-icons = true;
+      modi = "combi,files:${rofiFiles}/bin/rofi-files"; # {name}:{executable}
+      combi-modi = "drun,files,window";
+      combi-display-format = "{text}";
       display-combi = "Search";
       drun-display-format = "{name}";
+      show-icons = true;
     };
   };
+
 
   editors.cursor.enable = true; # cfg from editors module
 
