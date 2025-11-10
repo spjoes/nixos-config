@@ -6,8 +6,10 @@
     ../../modules/home/common.nix # Home Manager common modules
 
     # Application modules
-    ../../modules/home/apps/firefox.nix # Firefox module
+    ../../modules/home/apps/browsers/firefox.nix # Firefox module
+    ../../modules/home/apps/editors # Module to import editors
   ];
+
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -30,14 +32,11 @@
   };
 
   programs.ghostty.enable = true;
-  catppuccin.ghostty.enable = true;
-
   programs.obs-studio.enable = true;
-  catppuccin.obs.enable = true;
-
-  catppuccin.firefox.enable = true;
-
   programs.fastfetch.enable = true;
+
+  editors.cursor.enable = true; # cfg from editors module
+
 
   programs.spicetify =
   let
