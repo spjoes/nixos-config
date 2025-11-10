@@ -56,7 +56,7 @@
       };
       "element-text" = { horizontal-align = 0.5; };
       "element-icon".size = "2.4em";
-    }
+    };
   };
 
 
