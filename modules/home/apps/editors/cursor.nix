@@ -25,7 +25,6 @@ in
           vscjava.vscode-java-test
           vscjava.vscode-maven
           vscjava.vscode-gradle
-          VisualStudioExptTeam.vscodeintellicode
           vscjava.vscode-java-dependency
           vscjava.vscode-java-pack # Apparently I need this so I don't get prompted. Was told it does nothing.
         ]);
