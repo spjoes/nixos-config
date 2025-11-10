@@ -50,7 +50,7 @@
     theme = {
       listview = {
         columns       = 6;            # number of columns
-        lines         = 3;            # number of rows
+        lines         = 5;            # number of rows
         flow          = L "horizontal";   # row-first ordering
         spacing       = L "12px";     # gap between tiles
         fixed-columns = true;         # keep grid shape
@@ -59,7 +59,7 @@
       element = {
         orientation = L "vertical";
       };
-      "element-text" = { horizontal-align = "0.5em"; };
+      "element-text" = { horizontal-align = L "0.5"; };
       "element-icon".size = L "2.4em";
     };
   };
