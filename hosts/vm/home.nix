@@ -7,6 +7,7 @@
 
     # Application modules
     ../../modules/home/apps/firefox.nix # Firefox module
+    ../../modules/home/apps/editors/zed.nix # Zed module
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
