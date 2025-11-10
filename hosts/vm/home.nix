@@ -36,7 +36,7 @@
   programs.fastfetch.enable = true;
 
   editors.cursor.enable = true; # cfg from editors module
-  
+
   browsers.firefox.enable = true; # cfg from browsers module
 
   media.obs.enable = true; # cfg from media module
@@ -76,6 +76,7 @@
     # # "Hello, world!" when run.
     # hello
     prismlauncher
+    discord
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
