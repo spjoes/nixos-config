@@ -61,7 +61,41 @@
         "type": "github"
       }
     },
+    "nix-vscode-extensions": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1762740031,
+        "narHash": "sha256-tvUa9nvNerFarHlsw4sipFVWOk9DhHIa+uTW7C0tcxw=",
+        "owner": "nix-community",
+        "repo": "nix-vscode-extensions",
+        "rev": "d09b10414e1a10f7f9a9c9ec01d689d9d23d3f9c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-vscode-extensions",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1759770925,
+        "narHash": "sha256-CZwkCtzTNclqlhuwDsVtGoRumTpqCUK0xSnFIMgd8ls=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "674c2b09c59a220204350ced584cadaacee30038",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "674c2b09c59a220204350ced584cadaacee30038",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1762363567,
         "narHash": "sha256-YRqMDEtSMbitIMj+JLpheSz0pwEr0Rmy5mC7myl17xs=",
@@ -102,7 +136,8 @@
       "inputs": {
         "catppuccin": "catppuccin",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs",
+        "nix-vscode-extensions": "nix-vscode-extensions",
+        "nixpkgs": "nixpkgs_2",
         "nur": "nur",
         "spicetify-nix": "spicetify-nix"
       }
