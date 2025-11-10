@@ -34,6 +34,9 @@
 
   programs.ghostty.enable = true;
   programs.fastfetch.enable = true;
+  programs.rofi = {
+    enable = true;
+  };
 
   editors.cursor.enable = true; # cfg from editors module
 
