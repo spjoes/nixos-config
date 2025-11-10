@@ -95,7 +95,10 @@
     };
   };
 
-  nixpkgs.overlays = [ inputs.nur.overlays.default ];
+  nixpkgs.overlays = [
+    inputs.nur.overlays.default
+    inputs.nix-vscode-extensions.overlays.default
+  ];
 
   # Enable Steam
   programs.steam.enable = true;
