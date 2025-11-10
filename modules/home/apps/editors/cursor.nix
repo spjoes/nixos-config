@@ -2,11 +2,7 @@
 
 {
   # Themes are handled by catppuccin-nix module
-  programs.zed-editor = {
+  programs.vscode = {
     enable = true;
-    extensions = [
-      # Icons
-      "catppuccin-icons"
-    ];
-  };
+    package = pkgs.code-cursor;
 }
