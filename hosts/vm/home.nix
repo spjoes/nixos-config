@@ -35,7 +35,7 @@
   programs.obs-studio.enable = true;
   programs.fastfetch.enable = true;
 
-    editors.cursor.enable = true; # cfg from editors module
+  editors.cursor.enable = true; # cfg from editors module
 
   programs.spicetify =
   let
