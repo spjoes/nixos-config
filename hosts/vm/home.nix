@@ -46,8 +46,8 @@
       listview = {
         columns       = 6;            # number of columns
         lines         = 3;            # number of rows
-        flow          = L "horizontal";   # row-first ordering
-        spacing       = L "12px";     # gap between tiles
+        flow          = "horizontal";   # row-first ordering
+        spacing       = "12px";     # gap between tiles
         fixed-columns = true;         # keep grid shape
         fixed-height  = true;
       };
