@@ -38,15 +38,11 @@
     enable = true;
     plugins = [ pkgs.rofi-file-browser ];
     extraConfig = {
-      "show-icons" = true;
-
-      # Aliases so you can type "apps:" and "files:"
-      modi = "apps:drun,files:filebrowser,windows:window,run:run,combi";
-
-      # Put both into the same search field
-      "combi-modi" = "apps,files";
-      "combi-hide-mode-prefix" = false;
-      "display-combi" = "Search";
+      modi = "combi";
+      combi-modi = "drun,file-browser-extended,window";
+      show-icons = true;
+      display-combi = "Search";
+      drun-display-format = "{name}";
     };
   };
 
