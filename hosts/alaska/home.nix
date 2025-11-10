@@ -6,7 +6,7 @@
     ../../modules/home/common.nix # Home Manager common modules
 
     # Application modules
-    ../../modules/home/apps/browsers/firefox.nix # Firefox module
+    ../../modules/home/apps/browsers # Module to import browsers
     ../../modules/home/apps/editors # Module to import editors
   ];
 
@@ -36,7 +36,7 @@
   programs.fastfetch.enable = true;
 
   editors.cursor.enable = true; # cfg from editors module
-
+  browsers.firefox.enable = true; # cfg from browsers module
 
   programs.spicetify =
   let
@@ -78,12 +78,12 @@
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    # (nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
     # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
+    # (writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
