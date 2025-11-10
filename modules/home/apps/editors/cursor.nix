@@ -21,13 +21,13 @@ in
           # coderabbit.coderabbit-vscode # need to make a pr for this
         ] ++ pkgs.vscode-marketplace [
           redhat.java
-          vscjava.vscode-java-debug
-          vscjava.vscode-java-test
-          vscjava.vscode-maven
-          vscjava.vscode-gradle
-          VisualStudioExptTeam.vscodeintellicode
-          vscjava.vscode-java-dependency
-          vscjava.vscode-java-pack # Apparently I need this so I don't get prompted. Was told it does nothing.
+          # vscjava.vscode-java-debug
+          # vscjava.vscode-java-test
+          # vscjava.vscode-maven
+          # vscjava.vscode-gradle
+          # VisualStudioExptTeam.vscodeintellicode
+          # vscjava.vscode-java-dependency
+          # vscjava.vscode-java-pack # Apparently I need this so I don't get prompted. Was told it does nothing.
         ];
         userSettings = {
           # Sidebar

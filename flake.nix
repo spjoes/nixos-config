@@ -25,9 +25,6 @@
   outputs = { self, nixpkgs, nix-vscode-extensions, ... }@inputs: {
     # use "nixos", or your hostname as the name of the configuration
     # it's a better practice than "default" shown in the video
-    overlays = [
-      inputs.nix-vscode-extensions.overlays.default
-    ];
     nixosConfigurations = {
 
       vm = nixpkgs.lib.nixosSystem {
