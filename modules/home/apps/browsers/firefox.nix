@@ -87,6 +87,7 @@ in
           "browser.newtabpage.activity-stream.showWeather" = false;
           "browser.newtabpage.enabled" = false;
           "browser.download.useDownloadDir" = false;
+          "browser.toolbars.bookmarks.visibility" = "always";
           "privacy.globalprivacycontrol.enabled" = true;
           "media.eme.enabled" = true; # Allow playing DRM protected content
           "browser.dataFeatureRecommendations.enabled" = false;
@@ -109,24 +110,30 @@ in
           force = true;
           settings = [
             {
-              name = "Get unix";
-              url = "javascript:(function(){function parseIsoDatetime(dtstr) {     return new Date(dtstr); };  startElement = document.getElementById('availability-time'); endElement = document.getElementById('availability-time2');  start = parseIsoDatetime(startElement.getAttribute('datetime')); end = parseIsoDatetime(endElement.getAttribute('datetime'));  para = document.createElement('p'); para.innerText = Math.floor(start.getTime() / 1000) + '-' + Math.ceil(end.getTime() / 1000);  endElement.parentElement.appendChild(para);})();";
-            }
-            {
-              name = "03070"; # Zip code for New Hampshire
-              url = "https://www.eneba.com/us/checkout/payment";
-            }
-            {
-              name = "ChatGPT";
-              url = "https://chatgpt.com/";
-            }
-            {
-              name = "Anna's Archive";
-              url = "https://annas-archive.org/";
-            }
-            {
-              name = "Canvas";
-              url = "https://sjsu.instructure.com/";
+              name = "Bookmarks Bar";
+              toolbar = true;
+              bookmarks = [
+                {
+                  name = "Get unix";
+                  url = "javascript:(function(){function parseIsoDatetime(dtstr) {     return new Date(dtstr); };  startElement = document.getElementById('availability-time'); endElement = document.getElementById('availability-time2');  start = parseIsoDatetime(startElement.getAttribute('datetime')); end = parseIsoDatetime(endElement.getAttribute('datetime'));  para = document.createElement('p'); para.innerText = Math.floor(start.getTime() / 1000) + '-' + Math.ceil(end.getTime() / 1000);  endElement.parentElement.appendChild(para);})();";
+                }
+                {
+                  name = "03070";
+                  url = "https://www.eneba.com/us/checkout/payment";
+                }
+                {
+                  name = "ChatGPT";
+                  url = "https://chatgpt.com/";
+                }
+                {
+                  name = "Anna's Archive";
+                  url = "https://annas-archive.org/";
+                }
+                {
+                  name = "Canvas";
+                  url = "https://sjsu.instructure.com/";
+                }
+              ];
             }
           ];
         };
