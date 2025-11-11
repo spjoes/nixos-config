@@ -103,6 +103,32 @@ in
           ];
         };
 
+        bookmarks = {
+          force = true;
+          settings = [
+            {
+              name = "Get unix";
+              url = "javascript:(function(){function parseIsoDatetime(dtstr) {     return new Date(dtstr); };  startElement = document.getElementById('availability-time'); endElement = document.getElementById('availability-time2');  start = parseIsoDatetime(startElement.getAttribute('datetime')); end = parseIsoDatetime(endElement.getAttribute('datetime'));  para = document.createElement("p"); para.innerText = Math.floor(start.getTime() / 1000) + '-' + Math.ceil(end.getTime() / 1000);  endElement.parentElement.appendChild(para);})();";
+            }
+            {
+              name = "03070"; # Zip code for New Hampshire
+              url = "https://www.eneba.com/us/checkout/payment";
+            }
+            {
+              name = "ChatGPT";
+              url = "https://chatgpt.com/";
+            }
+            {
+              name = "Anna's Archive";
+              url = "https://annas-archive.org/";
+            }
+            {
+              name = "Canvas";
+              url = "https://sjsu.instructure.com/";
+            }
+          ]
+        }
+
           # Figure out how to declare the settings for uBlock Origin, Tampermonkey, and Stylus
           # Also figure out how to make these extensions auto-enable without having to manually enable them from Firefox.
       };
