@@ -99,8 +99,12 @@
     inputs.nix-vscode-extensions.overlays.default
   ];
 
-  # Enable Steam
+  # Enable Steam system wide
+  # (I believe I *need* to enable this system wide for things like proton to work better)
   programs.steam.enable = true;
+
+  # Enable Tailscale system wide
+  services.tailscale.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

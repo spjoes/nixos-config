@@ -37,6 +37,7 @@
   programs.fastfetch.enable = true;
   services.trayscale.enable = true;
 
+
   # Configs from editors module
   editors.cursor.enable = true;
 
