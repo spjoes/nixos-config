@@ -20,9 +20,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs = { self, nixpkgs, nix-vscode-extensions, ... }@inputs: {
+  outputs = { self, nixpkgs, nix-vscode-extensions, nix-flatpak, ... }@inputs: {
     # use "nixos", or your hostname as the name of the configuration
     # it's a better practice than "default" shown in the video
     nixosConfigurations = {
@@ -34,6 +35,7 @@
           inputs.catppuccin.nixosModules.catppuccin
           inputs.spicetify-nix.nixosModules.default
           inputs.home-manager.nixosModules.default
+          inputs.nix-flatpak.nixosModules.nix-flatpak
         ];
       };
 
@@ -44,6 +46,7 @@
           inputs.catppuccin.nixosModules.catppuccin
           inputs.spicetify-nix.nixosModules.default
           inputs.home-manager.nixosModules.default
+          inputs.nix-flatpak.nixosModules.nix-flatpak
         ];
       };
 

@@ -106,6 +106,11 @@
   # Enable Tailscale system wide
   services.tailscale.enable = true;
 
+  services.flatpak.enable = true;
+  services.flatpak.packages = [
+    "org.vinegarhq.Sober"
+  ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
