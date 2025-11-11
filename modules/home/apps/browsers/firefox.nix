@@ -102,6 +102,8 @@ in
             tampermonkey
           ];
         };
+        # Figure out how to declare the settings for uBlock Origin, Tampermonkey, and Stylus
+        # Also figure out how to make these extensions auto-enable without having to manually enable them from Firefox.
 
         bookmarks = {
           force = true;
@@ -126,11 +128,8 @@ in
               name = "Canvas";
               url = "https://sjsu.instructure.com/";
             }
-          ]
-        }
-
-          # Figure out how to declare the settings for uBlock Origin, Tampermonkey, and Stylus
-          # Also figure out how to make these extensions auto-enable without having to manually enable them from Firefox.
+          ];
+        };
       };
     };
   };
