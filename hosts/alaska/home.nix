@@ -9,6 +9,7 @@
     ../../modules/home/apps/browsers # Module to import browsers
     ../../modules/home/apps/editors # Module to import editors
     ../../modules/home/apps/media # Module to import media
+    ../../modules/home/apps/tools # Module to import tools
   ];
 
 
@@ -35,39 +36,18 @@
   programs.ghostty.enable = true;
   programs.fastfetch.enable = true;
 
-  editors.cursor.enable = true; # cfg from editors module
-  
-  browsers.firefox.enable = true; # cfg from browsers module
+  # Configs from editors module
+  editors.cursor.enable = true;
 
-  media.obs.enable = true; # cfg from media module
+  # Configs from browsers module
+  browsers.firefox.enable = true;
 
-  programs.spicetify =
-  let
-    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-  in
-  {
-    enable = true;
-    enabledExtensions = with spicePkgs.extensions; [
-      fullAlbumDate
-      volumePercentage
-      coverAmbience
-      # quickaddtoplaylist
-      # quickQueue
-      # tracktags
-      # playlistlabels
-      # spicylyrics
-      shuffle # shuffle+ (special characters are sanitized out of extension names)
-    ];
-    enabledSnippets = with spicePkgs.snippets; [
-      hideNowPlayingViewButton
-      modernScrollbar
-      ''
-      .main-actionBar-exploreButton { display: none !important; }
-      ''
-    ];
-    theme = spicePkgs.themes.catppuccin;
-    colorScheme = "mocha";
-  };
+  # Configs from media module
+  media.obs.enable = true;
+  media.spotify.enable = true;
+
+  # Configs from tools module
+  tools.rofi.enable = true;
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
