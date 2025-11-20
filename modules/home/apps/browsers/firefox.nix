@@ -133,6 +133,14 @@ in
                   name = "Canvas";
                   url = "https://sjsu.instructure.com/";
                 }
+                {
+                  name = "Nixpkgs-tracker";
+                  url = "https://nixpkgs-tracker.ocfox.me/";
+                }
+                {
+                  name = "NixOS Search";
+                  url = "https://search.nixos.org/packages?channel=unstable";
+                }
               ];
             }
           ];
