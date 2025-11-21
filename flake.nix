@@ -60,7 +60,7 @@
         ];
       };
 
-      # TODO: Add desktop configuration
+      # TODO: Add desktop (antarctica) configuration
 
     };
   };

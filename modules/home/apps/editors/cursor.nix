@@ -35,6 +35,13 @@ in
           # Extensions
           "redhat.telemetry.enabled" = false;
         };
+        keybindings = [
+          {
+            key = "ctrl+d";
+            command = "editor.action.copyLinesDownAction";
+            when = "editorTextFocus && !editorReadonly";
+          }
+        ];
       };
     };
   };
