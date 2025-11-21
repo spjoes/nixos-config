@@ -49,7 +49,7 @@
   media.spotify.enable = true;
 
   # Configs from tools module
-  tools.rofi.enable = true;
+  # tools.rofi.enable = true;
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -61,6 +61,7 @@
     discord
     slack
     maestral-gui
+    vicinae
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
