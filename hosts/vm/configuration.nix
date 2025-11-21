@@ -14,6 +14,7 @@
   home-manager.sharedModules = [
     inputs.catppuccin.homeModules.catppuccin
     inputs.spicetify-nix.homeManagerModules.default
+    inputs.vicinae.homeManagerModules.default
   ];
 
   # Bootloader.
