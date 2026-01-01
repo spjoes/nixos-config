@@ -11,10 +11,16 @@ in
   config = lib.mkIf cfg.enable {
       services.vicinae = {
         enable = true;
-        autoStart = true;
         settings = {
           theme.name = "catppuccin-mocha";
         };
+        systemd = {
+          enable = true;
+          autoStart = true;
+          environment = {
+            USE_LAYER_SHELL = 1;
+          }
+        }
     };
   };
 }
