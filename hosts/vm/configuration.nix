@@ -108,7 +108,10 @@
 
   # Enable Steam system wide
   # (I believe I *need* to enable this system wide for things like proton to work better)
-  programs.steam.enable = true;
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+  };
 
   # Enable Tailscale system wide
   services.tailscale.enable = true;
