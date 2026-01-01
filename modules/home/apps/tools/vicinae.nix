@@ -19,8 +19,8 @@ in
           autoStart = true;
           environment = {
             USE_LAYER_SHELL = 1;
-          }
-        }
+          };
+        };
     };
   };
 }
