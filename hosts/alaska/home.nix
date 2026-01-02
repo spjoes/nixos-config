@@ -142,6 +142,7 @@ in
     maestral-gui
     vlc
     github-desktop
+    protonvpn-gui
     # aseprite
 
     # # It is sometimes useful to fine-tune packages, for example, by applying

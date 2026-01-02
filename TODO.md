@@ -12,11 +12,11 @@
 - [X] Roblox
   - [ ] Convert flatpack module into a home manager module. you just need to go back to the git repo
 - [ ] qBitTorrent
-- [ ] ProtonVPN
+- [X] ProtonVPN
 - [ ] Windows VM
-  - Adobe Apps
-- [ ] Declaritive Inverted Scroling
+  - [ ] Adobe Apps
 - [X] Declaritive Catppuccin Theming for KDE
+- [ ] Declaritive Inverted Scroling
 - [ ] Set scrolling speed declaritively
 - [ ] Set apps pinned to taskbar declaritively
 - [X] Set theme declaritively
