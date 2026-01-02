@@ -1,5 +1,27 @@
 { config, pkgs, inputs, ... }:
 
+let
+  # We10XOS cursor theme from GitHub
+  # Repository: https://github.com/yeyushengfan258/We10XOS-cursors
+  # This is the cursor-only repository (not the full KDE theme suite)
+  we10xos-cursors = pkgs.stdenv.mkDerivation rec {
+    pname = "we10xos-cursors";
+    version = "git-2024";
+    src = pkgs.fetchFromGitHub {
+      owner = "yeyushengfan258";
+      repo = "We10XOS-cursors";
+      rev = "b971891cc016ba780af791ac9872a15406695ad8";
+      hash = "sha256-dy6gA2jZa0pxwXDnc3ckxWd01k2UG0EWG8hoeU5T28Y=";
+    };
+    dontBuild = true;
+    installPhase = ''
+      mkdir -p $out/share/icons/We10XOS
+      # The dist/ directory contains the theme files (index.theme and cursors/)
+      # Copy the entire dist/ directory as the We10XOS theme directory
+      cp -r $src/dist/* $out/share/icons/We10XOS/
+    '';
+  };
+in
 {
 
   imports = [
@@ -38,8 +60,11 @@
     enable = true;
     workspace = {
       colorScheme =  "Catppuccin Mocha Blue";
+      splashScreen = {
+        theme = "Catppuccin-Mocha-Blue";
+      };
       iconTheme = "Breeze Dark";
-      cursor.theme = "Breeze Dark";
+      cursor.theme = "We10XOS";
       windowDecorations = {
         library = "org.kde.breeze";
         theme = "Breeze";
@@ -57,11 +82,33 @@
         right = ["minimize" "maximize" "close"];
       };
     };
+    hotkeys.commands = {
+      toggle-vicinae = {
+        name = "Toggle Vicinae";
+        key = "Meta+Space";
+        command = "vicinae toggle";
+      };
+      snipping-tool = {
+        name = "Snipping Tool";
+        key = "Meta+Shift+S";
+        command = "sh -c \"spectacle -b -r -n -o /proc/self/fd/1 | wl-copy --type image/png\"";
+      };
+    };
   };
 
   programs.ghostty.enable = true;
   programs.fastfetch.enable = true;
   services.trayscale.enable = true;
+
+  # services.linux-wallpaperengine = {
+  #   enable = true;
+  #   wallpapers = [
+  #     {
+  #       monitor = "eDP-1";
+  #       wallpaperId = "2882606912"; # "Severance - Lumon - Macrodata Refinement"
+  #     }
+  #   ];
+  # };
 
   # Configs from editors module
   editors.cursor.enable = true;
@@ -77,17 +124,25 @@
   # tools.rofi.enable = true;
   tools.vicinae.enable = true;
 
+  programs.git = {
+    enable = true;
+    lfs.enable = true;
+  };
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # hello
+    we10xos-cursors
     prismlauncher
     discord
     slack
     maestral-gui
     vlc
+    github-desktop
+    # aseprite
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
