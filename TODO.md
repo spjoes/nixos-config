@@ -18,3 +18,9 @@
 - [?] Finish Cursor Setup
   - Coderabbit Pull Request
 - [ ] Hyprland
+- [ ] Declaritive Inverted Scroling
+- [ ] Declaritive Catppuccin Theming for KDE
+- [ ] Set scrolling speed declaritively
+- [ ] Set apps pinned to taskbar declaritively
+- [ ] Set theme declaritively
+- [ ] Set window decorations declaritively

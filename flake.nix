@@ -15,6 +15,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,7 +38,7 @@
     ];
   };
 
-  outputs = { self, nixpkgs, nix-vscode-extensions, nix-flatpak, vicinae, ... }@inputs: {
+  outputs = { self, nixpkgs, nix-vscode-extensions, nix-flatpak, vicinae, plasma-manager, ... }@inputs: {
     # use "nixos", or your hostname as the name of the configuration
     # it's a better practice than "default" shown in the video
     nixosConfigurations = {

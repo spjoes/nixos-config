@@ -141,6 +141,10 @@ in
                   name = "NixOS Search";
                   url = "https://search.nixos.org/packages?channel=unstable";
                 }
+                {
+                  name = "ProtonDB";
+                  url = "https://www.protondb.com/";
+                }
               ];
             }
           ];

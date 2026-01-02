@@ -26,6 +26,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
 
+  # 6.18 LTS kernel
+  boot.kernelPackages = pkgs.linuxPackages_6_18;
+
   networking.hostName = "alaska"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -44,6 +47,12 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.desktopManager.plasma6.enable = true;
+    environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    konsole
+    elisa
+    kate
+    okular
+  ];
 
   services.greetd = {
     enable = true;
@@ -120,6 +129,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
+    (catppuccin-kde.override {
+      flavour = [ "mocha" ];
+      accents = [ "blue" ];
+    })
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

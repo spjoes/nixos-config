@@ -4,6 +4,7 @@
 
   imports = [
     ../../modules/home/common.nix # Home Manager common modules
+    inputs.plasma-manager.homeModules.plasma-manager
 
     # Application modules
     ../../modules/home/apps/browsers # Module to import browsers
@@ -31,6 +32,31 @@
     enable = true;
     flavor = "mocha";
     accent = "blue";
+  };
+
+  programs.plasma = {
+    enable = true;
+    workspace = {
+      colorScheme =  "Catppuccin Mocha Blue";
+      iconTheme = "Breeze Dark";
+      cursor.theme = "Breeze Dark";
+      windowDecorations = {
+        library = "org.kde.breeze";
+        theme = "Breeze";
+      };
+    };
+    # input.touchpads = [
+    #   {
+    #     naturalScroll = true;
+    #     vendorId = " [IDK HOW TO GET THIS] ";
+    #   }
+    # ];
+    kwin = {
+      titlebarButtons = {
+        left = ["application-menu" "keep-above-windows"];
+        right = ["minimize" "maximize" "close"];
+      };
+    };
   };
 
   programs.ghostty.enable = true;
@@ -61,6 +87,7 @@
     discord
     slack
     maestral-gui
+    vlc
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
