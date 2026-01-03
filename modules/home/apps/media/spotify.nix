@@ -24,7 +24,7 @@ in
         # tracktags
         # playlistlabels
         # spicylyrics
-        shuffle # shuffle+ (special characters are sanitized out of extension names)
+        shuffle # this is shuffle+ (special characters are sanitized out of extension names)
       ];
       enabledSnippets = with spicePkgs.snippets; [
         hideNowPlayingViewButton
