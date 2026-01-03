@@ -29,6 +29,9 @@ in
           vscjava.vscode-java-pack # Apparently I need this so I don't get prompted. Was told it does nothing.
         ]);
         userSettings = {
+          # Font
+          "editor.fontFamily" = "Google Sans Code";
+
           # Sidebar
           "workbench.activityBar.orientation" = "vertical";
 

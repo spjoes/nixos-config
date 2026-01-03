@@ -23,3 +23,6 @@
 - [X] Set window decorations declaritively
 - [X] Set Windows 10 cursors declaritively
 - [X] Get vicinae working again
+- [ ] Disable whatever going to the top left of the screen does
+- [X] Install Google Sans Code
+- [X] Set Google Sans Code as the Cursor font

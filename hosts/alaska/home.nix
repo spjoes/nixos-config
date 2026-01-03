@@ -136,6 +136,7 @@ in
     # # "Hello, world!" when run.
     # hello
     we10xos-cursors
+    googlesans-code
     prismlauncher
     discord
     slack
