@@ -32,6 +32,10 @@ in
         };
 
         settings = {
+          "font.name.serif.x-western" = "Times New Roman";
+          "font.name.sans-serif.x-western" = "Arial";
+          "font.name.monospace.x-western" = "Google Sans Code";
+          "font.size.monospace.x-western" = 13;
           "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
           "sidebar.verticalTabs" = true;
           "sidebar.revamp" = true;
