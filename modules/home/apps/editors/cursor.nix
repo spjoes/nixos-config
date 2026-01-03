@@ -34,6 +34,18 @@ in
 
           # Extensions
           "redhat.telemetry.enabled" = false;
+
+          # Setup nix language server
+          "nix.serverPath" = "nixd";
+          "nix.enableLanguageServer" = true;
+          "nix.formatterPath" = "alejandra";
+          "nix.serverSettings" = {
+            "nixd" = {
+              "formatting" = {
+                "command" = ["alejandra"];
+              };
+            };
+          };
         };
         keybindings = [
           {

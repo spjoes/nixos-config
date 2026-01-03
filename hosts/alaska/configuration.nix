@@ -133,6 +133,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     wl-clipboard
+    nixd
+    alejandra
     (catppuccin-kde.override {
       flavour = [ "mocha" ];
       accents = [ "blue" ];
