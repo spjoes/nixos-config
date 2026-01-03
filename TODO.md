@@ -26,3 +26,4 @@
 - [ ] Disable whatever going to the top left of the screen does
 - [X] Install Google Sans Code
 - [X] Set Google Sans Code as the Cursor font
+- [ ] Figure out Firefox font rendering

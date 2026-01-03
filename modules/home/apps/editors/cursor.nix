@@ -49,6 +49,10 @@ in
               };
             };
           };
+
+          # Disable updates - updates are handled by NixOS
+          "update.enableWindowsBackgroundUpdates" = false;
+          "update.mode" = "none";
         };
         keybindings = [
           {
