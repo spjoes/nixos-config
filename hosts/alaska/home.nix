@@ -132,19 +132,26 @@ in
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # hello
-    we10xos-cursors
-    googlesans-code
-    prismlauncher
-    discord
-    slack
+    # Tools & Utilities
     maestral-gui
     vlc
     github-desktop
     protonvpn-gui
+
+    # Communication
+    discord
+    slack
+
+    # Games
+    prismlauncher
     # aseprite
+
+    # Fonts
+    googlesans-code
+    corefonts
+
+    # Cursors
+    we10xos-cursors
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
