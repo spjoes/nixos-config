@@ -15,6 +15,7 @@
     inputs.catppuccin.homeModules.catppuccin
     inputs.spicetify-nix.homeManagerModules.default
     inputs.vicinae.homeManagerModules.default
+    inputs.kairpods.homeModules.default
   ];
 
   # Bootloader.

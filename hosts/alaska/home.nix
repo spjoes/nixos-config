@@ -99,6 +99,7 @@ in
   programs.ghostty.enable = true;
   programs.fastfetch.enable = true;
   services.trayscale.enable = true;
+  services.kairpods.enable = true;
 
   # services.linux-wallpaperengine = {
   #   enable = true;

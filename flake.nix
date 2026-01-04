@@ -27,6 +27,11 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     vicinae.url = "github:vicinaehq/vicinae";
+    kairpods = {
+      url = "github:Brad-Hesson/kAirPods/add-nixos-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   nixConfig = {
