@@ -1,9 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 let
-  # We10XOS cursor theme from GitHub
-  # Repository: https://github.com/yeyushengfan258/We10XOS-cursors
-  # This is the cursor-only repository (not the full KDE theme suite)
+  # We10XOS cursor theme from GitHub (https://github.com/yeyushengfan258/We10XOS-cursors)
   we10xos-cursors = pkgs.stdenv.mkDerivation rec {
     pname = "we10xos-cursors";
     version = "git-2024";
@@ -138,6 +136,9 @@ in
     vlc
     github-desktop
     protonvpn-gui
+
+    # Development
+    nodejs
 
     # Communication
     discord
