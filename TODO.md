@@ -7,7 +7,7 @@
 
 - [ ]/ Configure OBS Studio declaratively
 - [ ]? Continue Spicetify-nix
-- [ ] Affinity Designer (?)
+- [X] Affinity Designer
 - [X] Tailscale
 - [X] Roblox
   - [ ] Convert flatpack module into a home manager module. you just need to go back to the git repo
@@ -16,8 +16,7 @@
 - [ ] Windows VM
   - [ ] Adobe Apps
 - [X] Declaritive Catppuccin Theming for KDE
-- [ ] Declaritive Inverted Scroling
-- [ ] Set scrolling speed declaritively
+- [X] Declaritive Inverted Scroling
 - [ ] Set apps pinned to taskbar declaritively
 - [X] Set theme declaritively
 - [X] Set window decorations declaritively
