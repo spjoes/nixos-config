@@ -146,7 +146,7 @@ in
 
     # Games
     prismlauncher
-    # aseprite
+    aseprite
 
     # Fonts
     googlesans-code
