@@ -76,6 +76,7 @@ in
                 "ublock0_raymondhill_net-browser-action" # uBlock Origin
                 "firefox_tampermonkey_net-browser-action" # Tampermonkey
                 "_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action" # Stylus
+                "_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action" # Bitwarden
               ];
             };
           };
@@ -99,6 +100,14 @@ in
           "media.eme.enabled" = true; # Allow playing DRM protected content
           "browser.dataFeatureRecommendations.enabled" = false;
           "layout.css.prefers-color-scheme.content-override" = 0; # Force dark mode (0 = dark, 1 = light, 2 = system)
+
+          "signon.rememberSignons" = false; # Dont ask to remember passwords. This is handled by Bitwarden.
+          "services.sync.prefs.sync.signon.rememberSignons" = true;
+          "services.sync.prefs.sync-seen.signon.rememberSignons" = true;
+
+          "signon.management.page.breach-alerts.enabled" = false; # Dont show breach alerts. This is handled by Bitwarden.
+          "services.sync.prefs.sync.signon.management.page.breach-alerts.enabled" = true;
+          "services.sync.prefs.sync-seen.signon.management.page.breach-alerts.enabled" = true;
         };
 
         extensions = with pkgs.nur.repos.rycee.firefox-addons; {
@@ -108,6 +117,7 @@ in
             ublock-origin
             stylus
             tampermonkey
+            bitwarden
           ];
         };
         # Figure out how to declare the settings for uBlock Origin, Tampermonkey, and Stylus

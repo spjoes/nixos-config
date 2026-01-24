@@ -144,6 +144,7 @@ in
     vlc
     github-desktop
     protonvpn-gui
+    bitwarden-desktop
 
     # Development
     nodejs
