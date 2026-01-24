@@ -57,6 +57,7 @@ in
 
   programs.plasma = {
     enable = true;
+    overrideConfig = false;
     workspace = {
       colorScheme =  "Catppuccin Mocha Blue";
       splashScreen = {
@@ -69,12 +70,15 @@ in
         theme = "Breeze";
       };
     };
-    # input.touchpads = [
-    #   {
-    #     naturalScroll = true;
-    #     vendorId = " [IDK HOW TO GET THIS] ";
-    #   }
-    # ];
+    input.touchpads = [
+      {
+        enable = true;
+        name = "SYNA32C9:00 06CB:CE7D Touchpad";
+        vendorId = "06cb";
+        productId = "ce7d";
+        naturalScroll = true;
+      }
+    ];
     kwin = {
       titlebarButtons = {
         left = ["application-menu" "keep-above-windows"];
