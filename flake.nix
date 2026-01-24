@@ -32,6 +32,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    affinity-nix.url = "github:mrshmllow/affinity-nix";
   };
 
   nixConfig = {
@@ -43,9 +44,7 @@
     ];
   };
 
-  outputs = { self, nixpkgs, nix-vscode-extensions, nix-flatpak, vicinae, plasma-manager, ... }@inputs: {
-    # use "nixos", or your hostname as the name of the configuration
-    # it's a better practice than "default" shown in the video
+  outputs = { self, nixpkgs, nix-vscode-extensions, nix-flatpak, vicinae, plasma-manager, affinity-nix, ... }@inputs: {
     nixosConfigurations = {
 
       vm = nixpkgs.lib.nixosSystem {

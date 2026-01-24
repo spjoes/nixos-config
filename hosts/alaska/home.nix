@@ -31,6 +31,7 @@ in
     ../../modules/home/apps/editors # Module to import editors
     ../../modules/home/apps/media # Module to import media
     ../../modules/home/apps/tools # Module to import tools
+    ../../modules/home/apps/art # Module to import art applications
   ];
 
 
@@ -119,6 +120,9 @@ in
   media.obs.enable = true;
   media.spotify.enable = true;
 
+  # Configs from art module
+  art.aseprite.enable = true;
+
   # Configs from tools module
   # tools.rofi.enable = true;
   tools.vicinae.enable = true;
@@ -146,7 +150,6 @@ in
 
     # Games
     prismlauncher
-    aseprite
 
     # Fonts
     googlesans-code
@@ -154,6 +157,9 @@ in
 
     # Cursors
     we10xos-cursors
+
+    # Art & Design
+    inputs.affinity-nix.packages.x86_64-linux.v3
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
