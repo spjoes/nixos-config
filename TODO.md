@@ -10,7 +10,7 @@
 - [X] Affinity Designer
 - [X] Tailscale
 - [X] Roblox
-  - [ ] Convert flatpack module into a home manager module. you just need to go back to the git repo
+  - [ ] Convert flatpack module into a home manager module. you just need to go back to the git repo (2026 UPDATE: no idea what this meant)
 - [ ] qBitTorrent
 - [X] ProtonVPN
 - [ ] Windows VM
@@ -22,7 +22,7 @@
 - [X] Set window decorations declaritively
 - [X] Set Windows 10 cursors declaritively
 - [X] Get vicinae working again
-- [ ] Disable whatever going to the top left of the screen does
+- [ ] Declaritively disable whatever going to the top left of the screen does (Hot corners?)
 - [X] Install Google Sans Code
 - [X] Set Google Sans Code as the Cursor font
-- [ ] Figure out Firefox font rendering
+- [ ]/ Figure out Firefox font rendering

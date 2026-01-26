@@ -60,6 +60,10 @@ in
             command = "editor.action.copyLinesDownAction";
             when = "editorTextFocus && !editorReadonly";
           }
+          {
+            key = "ctrl+shift+'";
+            command = "editor.cpp.toggle";
+          }
         ];
       };
     };
