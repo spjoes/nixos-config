@@ -103,6 +103,7 @@ in
   programs.fastfetch.enable = true;
   services.trayscale.enable = true;
   services.kairpods.enable = true;
+  services.mpris-proxy.enable = true; # Allow headset buttons to control media
 
   # services.linux-wallpaperengine = {
   #   enable = true;
