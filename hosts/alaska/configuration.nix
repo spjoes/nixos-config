@@ -42,6 +42,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.powersave = false; # Disable power save for wifi
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
