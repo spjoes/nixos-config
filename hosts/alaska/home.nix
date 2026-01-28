@@ -153,6 +153,7 @@ in
     # Communication
     discord
     slack
+    telegram-desktop
 
     # Games
     prismlauncher
