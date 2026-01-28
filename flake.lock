@@ -240,16 +240,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1767150661,
+        "lastModified": 1767585175,
         "narHash": "sha256-RgaLfAZ7P14opr26RYzHmeAlL9r6F6GpNVcXVUa4UM0=",
-        "owner": "Brad-Hesson",
+        "owner": "can1357",
         "repo": "kAirPods",
-        "rev": "f7292946a61d2e6e3b36cd770e518bf7a8172181",
+        "rev": "1782439da7cc9afb46f2d28f47e964f182408e42",
         "type": "github"
       },
       "original": {
-        "owner": "Brad-Hesson",
-        "ref": "add-nixos-flake",
+        "owner": "can1357",
         "repo": "kAirPods",
         "type": "github"
       }

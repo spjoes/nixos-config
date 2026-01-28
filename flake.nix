@@ -28,7 +28,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     vicinae.url = "github:vicinaehq/vicinae";
     kairpods = {
-      url = "github:Brad-Hesson/kAirPods/add-nixos-flake";
+      url = "github:can1357/kAirPods";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
