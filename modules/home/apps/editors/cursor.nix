@@ -10,6 +10,7 @@ in
 
   config = lib.mkIf cfg.enable {
     # Themes are handled by catppuccin-nix module
+    programs.java.enable = true;
     programs.vscode = {
       enable = true;
       package = pkgs.code-cursor;
@@ -55,14 +56,17 @@ in
           "update.mode" = "none";
 
           # Java configuration
-          "java.jdt.ls.java.home" = "/run/current-system/sw/lib/openjdk";
+          "java.jdt.ls.java.home" = "${pkgs.jdk}/lib/openjdk";
           "java.configuration.runtimes" = [
             {
               "name" = "JavaSE-21";
-              "path" = "/run/current-system/sw/lib/openjdk";
+              "path" = "${pkgs.jdk}/lib/openjdk";
               "default" = true;
             }
           ];
+          "java.configuration.updateBuildConfiguration" = "automatic";
+          "[java]"."editor.defaultFormatter" = "redhat.java";
+          "java.debug.logLevel" = "trace";
         };
         keybindings = [
           {
