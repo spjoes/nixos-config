@@ -138,6 +138,7 @@
     wl-clipboard
     nixd
     alejandra
+    jdk
     (catppuccin-kde.override {
       flavour = [ "mocha" ];
       accents = [ "blue" ];
