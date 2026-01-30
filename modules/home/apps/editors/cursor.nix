@@ -53,6 +53,16 @@ in
           # Disable updates - updates are handled by NixOS
           "update.enableWindowsBackgroundUpdates" = false;
           "update.mode" = "none";
+
+          # Java configuration
+          "java.jdt.ls.java.home" = "/run/current-system/sw/lib/openjdk";
+          "java.configuration.runtimes" = [
+            {
+              "name" = "JavaSE-21";
+              "path" = "/run/current-system/sw/lib/openjdk";
+              "default" = true;
+            }
+          ];
         };
         keybindings = [
           {
