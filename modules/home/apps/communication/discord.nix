@@ -15,9 +15,10 @@ in
       settings = {
         appBadge = false;
         arRPC = true;
-        enableSplashScreen = false;
+        enableSplashScreen = true;
         tray = true;
         hardwareAcceleration = true;
+        hardwareVideoAcceleration = true;
         discordBranch = "stable";
       };
       vencord = {
@@ -26,6 +27,13 @@ in
           autoUpdate = true;
           autoUpdateNotification = false;
           notifyAboutUpdates = false;
+          winNativeTitleBar = false;
+
+          plugins = {
+            QuickMention.enabled = true;
+            SpotifyControls.enabled = true;
+            WebScreenShareFixes.enabled = true;
+          };
         };
       };
     };
