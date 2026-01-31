@@ -9,6 +9,8 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+    home.file.".config/vesktop/userAssets/splash".source = ./splash;
+
     programs.vesktop = {
       enable = true;
 
