@@ -22,6 +22,7 @@ in
         hardwareAcceleration = true;
         hardwareVideoAcceleration = true;
         discordBranch = "stable";
+        customTitleBar = true;
       };
       vencord = {
         useSystem = true;

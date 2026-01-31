@@ -68,6 +68,9 @@ in
           "java.configuration.updateBuildConfiguration" = "automatic";
           "[java]"."editor.defaultFormatter" = "redhat.java";
           "java.debug.logLevel" = "trace";
+
+          # Window title bar style
+          "window.titleBarStyle" = "custom";
         };
         keybindings = [
           {
