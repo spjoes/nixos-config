@@ -32,6 +32,7 @@ in
     ../../modules/home/apps/media # Module to import media
     ../../modules/home/apps/tools # Module to import tools
     ../../modules/home/apps/art # Module to import art applications
+    ../../modules/home/apps/communication # Module to import communication applications
   ];
 
 
@@ -132,6 +133,9 @@ in
   # tools.rofi.enable = true;
   tools.vicinae.enable = true;
 
+  # Configs from communication module
+  communication.discord.enable = true;
+
   programs.git = {
     enable = true;
     lfs.enable = true;
@@ -151,7 +155,6 @@ in
     nodejs
 
     # Communication
-    discord
     slack
     telegram-desktop
 

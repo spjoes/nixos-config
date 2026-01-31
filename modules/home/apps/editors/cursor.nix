@@ -57,6 +57,7 @@ in
 
           # Java configuration
           "java.jdt.ls.java.home" = "${pkgs.jdk}/lib/openjdk";
+          "java.import.gradle.home" = "${pkgs.gradle}/lib/gradle";
           "java.configuration.runtimes" = [
             {
               "name" = "JavaSE-21";
