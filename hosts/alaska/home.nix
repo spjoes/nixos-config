@@ -160,6 +160,7 @@ in
 
     # Games
     prismlauncher
+    inputs.hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # Fonts
     googlesans-code
@@ -169,7 +170,7 @@ in
     we10xos-cursors
 
     # Art & Design
-    inputs.affinity-nix.packages.x86_64-linux.v3
+    inputs.affinity-nix.packages.${pkgs.stdenv.hostPlatform.system}.v3
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

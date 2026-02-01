@@ -33,6 +33,7 @@
       inputs.home-manager.follows = "home-manager";
     };
     affinity-nix.url = "github:mrshmllow/affinity-nix";
+    hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
   };
 
   nixConfig = {
@@ -44,7 +45,7 @@
     ];
   };
 
-  outputs = { self, nixpkgs, nix-vscode-extensions, nix-flatpak, vicinae, plasma-manager, affinity-nix, ... }@inputs: {
+  outputs = { self, nixpkgs, nix-vscode-extensions, nix-flatpak, vicinae, plasma-manager, affinity-nix, hytale-launcher,... }@inputs: {
     nixosConfigurations = {
 
       vm = nixpkgs.lib.nixosSystem {
