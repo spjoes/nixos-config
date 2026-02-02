@@ -13,6 +13,12 @@ in
 
     programs.vesktop = {
       enable = true;
+      package = pkgs.vesktop.overrideAttrs (oldAttrs: {
+        postFixup = (oldAttrs.postFixup or "") + ''
+          wrapProgram $out/bin/vesktop \
+            --add-flags "--enable-blink-features=MiddleClickAutoscroll"
+        '';
+      });
 
       settings = {
         appBadge = false;
