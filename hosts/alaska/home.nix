@@ -59,7 +59,9 @@ in
   programs.plasma = {
     enable = true;
     overrideConfig = false;
+
     workspace = {
+      enableMiddleClickPaste = false;
       colorScheme =  "Catppuccin Mocha Blue";
       splashScreen = {
         theme = "Catppuccin-Mocha-Blue";
