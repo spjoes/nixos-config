@@ -11,4 +11,4 @@ git clone https://git.aserver.online/Joey/nixos-config.git ~/.dotfiles
 ```
 sudo nixos-rebuild switch --flake ~/.dotfiles/#[host]
 ```
-> Note: "[host]" here should be replaced with any defined host (currently "vm" and "alaska")
+> Note: "[host]" here should be replaced with any defined host (currently "[vm](./hosts/vm)" and "[alaska](./hosts/alaska)")
