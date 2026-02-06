@@ -97,6 +97,7 @@ in
           "browser.download.useDownloadDir" = false;
           "browser.toolbars.bookmarks.visibility" = "always";
           "browser.tabs.groups.enabled" = false;
+          "browser.tabs.groups.smart.enabled" = false;
           "privacy.globalprivacycontrol.enabled" = true;
           "media.eme.enabled" = true; # Allow playing DRM protected content
           "browser.dataFeatureRecommendations.enabled" = false;
