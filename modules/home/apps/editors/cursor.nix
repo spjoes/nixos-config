@@ -20,15 +20,14 @@ in
           jnoortheen.nix-ide # Nix IDE
           wakatime.vscode-wakatime # Wakatime
           # coderabbit.coderabbit-vscode # need to make a pr for this
-        ] ++ (with pkgs.vscode-marketplace; [
-          redhat.java
+          redhat.java # Java language support
           vscjava.vscode-java-debug
           vscjava.vscode-java-test
           vscjava.vscode-maven
           vscjava.vscode-gradle
           vscjava.vscode-java-dependency
-          vscjava.vscode-java-pack # Apparently I need this so I don't get prompted. Was told it does nothing.
-        ]);
+          vscjava.vscode-java-pack
+        ];
         userSettings = {
           # Font
           "editor.fontFamily" = "Google Sans Code";
