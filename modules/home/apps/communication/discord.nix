@@ -31,7 +31,6 @@ in
         customTitleBar = true;
       };
       vencord = {
-        useSystem = true;
         settings = {
           autoUpdate = true;
           autoUpdateNotification = false;
