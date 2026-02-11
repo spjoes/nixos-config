@@ -212,6 +212,12 @@ in
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+
+    ".cache/noctalia/wallpapers.json" = {
+      text = builtins.toJSON {
+        defaultWallpaper = "/home/joey/Pictures/Wallpapers/knicks_catppuccin.png";
+      };
+    };
   };
 
   # Home Manager can also manage your environment variables through
