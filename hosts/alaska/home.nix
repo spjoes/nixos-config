@@ -25,6 +25,7 @@ in
   imports = [
     ../../modules/home/common.nix # Home Manager common modules
     inputs.plasma-manager.homeModules.plasma-manager
+    inputs.noctalia.homeModules.default
 
     # Application modules
     ../../modules/home/apps/browsers # Module to import browsers
@@ -54,6 +55,10 @@ in
     enable = true;
     flavor = "mocha";
     accent = "blue";
+  };
+
+  programs.noctalia-shell = {
+    enable = true;
   };
 
   programs.plasma = {

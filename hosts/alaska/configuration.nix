@@ -57,6 +57,9 @@
     okular
   ];
 
+  # Enable Niri
+  programs.niri.enable = true;
+
   services.xserver.excludePackages = [ pkgs.xterm ];
 
   services.greetd = {

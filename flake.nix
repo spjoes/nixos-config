@@ -34,6 +34,10 @@
     };
     affinity-nix.url = "github:mrshmllow/affinity-nix";
     hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -45,7 +49,7 @@
     ];
   };
 
-  outputs = { self, nixpkgs, nix-vscode-extensions, nix-flatpak, vicinae, plasma-manager, affinity-nix, hytale-launcher,... }@inputs: {
+  outputs = { self, nixpkgs, nix-vscode-extensions, nix-flatpak, vicinae, plasma-manager, affinity-nix, hytale-launcher, noctalia,... }@inputs: {
     nixosConfigurations = {
 
       vm = nixpkgs.lib.nixosSystem {
@@ -67,6 +71,7 @@
           inputs.spicetify-nix.nixosModules.default
           inputs.home-manager.nixosModules.default
           inputs.nix-flatpak.nixosModules.nix-flatpak
+          inputs.noctalia.nixosModules.default
         ];
       };
 
