@@ -67,7 +67,10 @@ in
         theme = "Catppuccin-Mocha-Blue";
       };
       iconTheme = "Breeze Dark";
-      cursor.theme = "We10XOS";
+      cursor = {
+        cursorFeedback = "None";
+        theme = "We10XOS";
+      };
       windowDecorations = {
         library = "org.kde.breeze";
         theme = "Breeze";
