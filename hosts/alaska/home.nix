@@ -164,6 +164,9 @@ in
     prismlauncher
     inputs.hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
 
+    # Music
+    cider-2
+
     # Fonts
     googlesans-code
     corefonts
