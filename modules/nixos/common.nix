@@ -28,5 +28,6 @@
     gp = "git push origin main";
     gpl = "git pull";
     c = "clear";
+    alaska = "sudo nixos-rebuild switch --flake ~/.dotfiles/#alaska";
   };
 }
