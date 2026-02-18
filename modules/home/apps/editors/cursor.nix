@@ -30,9 +30,7 @@ in
           vscjava.vscode-gradle
           vscjava.vscode-java-dependency
           vscjava.vscode-java-pack
-        ] ++ (with pkgs.vscode-marketplace; [
-          openai.chatgpt # Codex
-        ]);
+        ];
         userSettings = {
           # Font
           "editor.fontFamily" = "Google Sans Code";
