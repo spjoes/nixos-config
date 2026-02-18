@@ -158,6 +158,9 @@ in
 
     # Development
     nodejs
+    go
+    go-task
+    pngcrush
 
     # Communication
     slack
