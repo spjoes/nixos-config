@@ -19,6 +19,9 @@ in
           eamodio.gitlens # GitLens
           jnoortheen.nix-ide # Nix IDE
           wakatime.vscode-wakatime # Wakatime
+          sourcegraph.amp # Sourcegraph AI
+          
+          
           # coderabbit.coderabbit-vscode # need to make a pr for this
           redhat.java # Java language support
           vscjava.vscode-java-debug
@@ -27,7 +30,9 @@ in
           vscjava.vscode-gradle
           vscjava.vscode-java-dependency
           vscjava.vscode-java-pack
-        ];
+        ] ++ (with pkgs.vscode-marketplace; [
+          openai.chatgpt # Codex
+        ]);
         userSettings = {
           # Font
           "editor.fontFamily" = "Google Sans Code";
