@@ -31,6 +31,7 @@ in {
       ];
 
       userSettings = {
+        auto_update = false;
         restore_on_startup = "last_session";
         minimap.show = "always";
         agent_servers = {
