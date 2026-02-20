@@ -36,6 +36,12 @@ in {
               path_lookup = true;
             };
           };
+          gopls = {
+            binary = {
+              path = lib.getExe pkgs.gopls;
+              path_lookup = true;
+            };
+          };
         };
 
         languages = {
@@ -48,6 +54,11 @@ in {
                 command = lib.getExe pkgs.alejandra;
               };
             };
+          };
+          "Go" = {
+            tab_size = 4;
+            language_servers = ["gopls"];
+            formatter = "language_server";
           };
         };
       };

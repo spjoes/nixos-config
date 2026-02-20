@@ -142,10 +142,14 @@ in {
   # Configs from communication module
   communication.discord.enable = true;
 
+  # Development
   programs.git = {
     enable = true;
     lfs.enable = true;
   };
+
+  #Languages
+  programs.go.enable = true;
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -159,7 +163,7 @@ in {
 
     # Development
     nodejs
-    go
+    gopls
     go-task
     pngcrush
 
