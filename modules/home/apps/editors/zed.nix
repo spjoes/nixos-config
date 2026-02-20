@@ -20,6 +20,16 @@ in {
         "nix"
       ];
 
+      userKeymaps = [
+        {
+          context = "Editor";
+          bindings = {
+            "ctrl-d" = "editor::DuplicateLineDown";
+            "ctrl-alt-'" = "editor::ToggleEditPrediction";
+          };
+        }
+      ];
+
       userSettings = {
         restore_on_startup = "last_session";
         minimap.show = "always";
