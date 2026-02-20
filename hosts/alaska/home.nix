@@ -123,6 +123,7 @@ in
 
   # Configs from editors module
   editors.cursor.enable = true;
+  editors.zed.enable = true;
 
   # Configs from browsers module
   browsers.firefox.enable = true;
