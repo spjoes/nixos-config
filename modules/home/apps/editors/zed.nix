@@ -38,6 +38,9 @@ in {
             command = "${pkgs.codex-acp}/bin/codex-acp";
           };
         };
+        features = {
+          edit_prediction_provider = "copilot";
+        };
 
         lsp = {
           nixd = {
