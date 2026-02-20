@@ -45,9 +45,18 @@
     ];
   };
 
-  outputs = { self, nixpkgs, nix-vscode-extensions, nix-flatpak, vicinae, plasma-manager, affinity-nix, hytale-launcher,... }@inputs: {
+  outputs = {
+    self,
+    nixpkgs,
+    nix-vscode-extensions,
+    nix-flatpak,
+    vicinae,
+    plasma-manager,
+    affinity-nix,
+    hytale-launcher,
+    ...
+  } @ inputs: {
     nixosConfigurations = {
-
       vm = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
@@ -71,7 +80,6 @@
       };
 
       # TODO: Add desktop (antarctica) configuration
-
     };
   };
 }

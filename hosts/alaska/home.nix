@@ -1,6 +1,9 @@
-{ config, pkgs, inputs, ... }:
-
-let
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}: let
   # We10XOS cursor theme from GitHub (https://github.com/yeyushengfan258/We10XOS-cursors)
   we10xos-cursors = pkgs.stdenv.mkDerivation rec {
     pname = "we10xos-cursors";
@@ -19,9 +22,7 @@ let
       cp -r $src/dist/* $out/share/icons/We10XOS/
     '';
   };
-in
-{
-
+in {
   imports = [
     ../../modules/home/common.nix # Home Manager common modules
     inputs.plasma-manager.homeModules.plasma-manager
@@ -34,7 +35,6 @@ in
     ../../modules/home/apps/art # Module to import art applications
     ../../modules/home/apps/communication # Module to import communication applications
   ];
-
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -49,7 +49,7 @@ in
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "25.05"; # Please read the comment before changing.
-  
+
   catppuccin = {
     enable = true;
     flavor = "mocha";
@@ -62,7 +62,7 @@ in
 
     workspace = {
       enableMiddleClickPaste = false;
-      colorScheme =  "Catppuccin Mocha Blue";
+      colorScheme = "Catppuccin Mocha Blue";
       splashScreen = {
         theme = "Catppuccin-Mocha-Blue";
       };

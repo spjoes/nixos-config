@@ -1,7 +1,9 @@
-{ config, pkgs, inputs, ... }:
-
 {
-
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ../../modules/home/common.nix # Home Manager common modules
 
@@ -11,7 +13,6 @@
     ../../modules/home/apps/media # Module to import media
     ../../modules/home/apps/tools # Module to import tools
   ];
-
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -26,7 +27,7 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "25.05"; # Please read the comment before changing.
-  
+
   catppuccin = {
     enable = true;
     flavor = "mocha";
@@ -36,7 +37,6 @@
   programs.ghostty.enable = true;
   programs.fastfetch.enable = true;
   services.trayscale.enable = true;
-
 
   # Configs from editors module
   editors.cursor.enable = true;

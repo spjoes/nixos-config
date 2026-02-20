@@ -1,7 +1,10 @@
-{ config, pkgs, ... }:
 {
-  home.sessionVariables = { };
-  
+  config,
+  pkgs,
+  ...
+}: {
+  home.sessionVariables = {};
+
   programs.git = {
     enable = true;
     settings = {

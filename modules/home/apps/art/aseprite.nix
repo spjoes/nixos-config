@@ -1,16 +1,18 @@
-{ config, pkgs, lib, ... }:
-
-let
-  cfg = config.art.aseprite;
-in
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
+  cfg = config.art.aseprite;
+in {
   options.art.aseprite = {
     enable = lib.mkEnableOption "Enable Aseprite with Catppuccin Mocha theme";
   };
 
   config = lib.mkIf cfg.enable {
     # Install Aseprite package
-    home.packages = [ pkgs.aseprite ];
+    home.packages = [pkgs.aseprite];
 
     # Install Catppuccin Mocha theme extension
     home.activation.asepriteTheme = lib.hm.dag.entryAfter ["writeBoundary"] ''
@@ -24,7 +26,7 @@ in
         }}/* $out/
         echo '{"installedFiles": ["package.json", "sheet.aseprite-data", "sheet.png", "theme.xml"]}' > $out/__info.json
       ''}"
-      
+
       if [ ! -d "$THEME_DIR" ] || [ -L "$THEME_DIR" ]; then
         $DRY_RUN_CMD rm -rf "$THEME_DIR"
         $DRY_RUN_CMD mkdir -p "$(dirname "$THEME_DIR")"
@@ -36,7 +38,7 @@ in
     # Set Aseprite theme preference
     home.activation.asepriteThemeConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
       INI_FILE="${config.home.homeDirectory}/.config/aseprite/aseprite.ini"
-      
+
       if [ -f "$INI_FILE" ]; then
         if grep -q "^\[theme\]" "$INI_FILE"; then
           $DRY_RUN_CMD ${pkgs.gnused}/bin/sed -i '/^\[theme\]/,/^\[/ s/^selected = .*/selected = Catppuccin Theme Mocha/' "$INI_FILE"

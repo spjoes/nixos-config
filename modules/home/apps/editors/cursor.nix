@@ -1,9 +1,11 @@
-{ config, pkgs, lib, ... }:
-
-let
-  cfg = config.editors.cursor;
-in
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
+  cfg = config.editors.cursor;
+in {
   options.editors.cursor = {
     enable = lib.mkEnableOption "Enable the Cursor editor";
   };
@@ -20,8 +22,7 @@ in
           jnoortheen.nix-ide # Nix IDE
           wakatime.vscode-wakatime # Wakatime
           sourcegraph.amp # Sourcegraph AI
-          
-          
+
           # coderabbit.coderabbit-vscode # need to make a pr for this
           redhat.java # Java language support
           vscjava.vscode-java-debug

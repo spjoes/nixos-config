@@ -1,9 +1,11 @@
-{ config, pkgs, lib, ... }:
-
-let
-  cfg = config.communication.discord;
-in
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
+  cfg = config.communication.discord;
+in {
   options.communication.discord = {
     enable = lib.mkEnableOption "Enable the Vesktop Discord client";
   };
@@ -14,10 +16,12 @@ in
     programs.vesktop = {
       enable = true;
       package = pkgs.vesktop.overrideAttrs (oldAttrs: {
-        postFixup = (oldAttrs.postFixup or "") + ''
-          wrapProgram $out/bin/vesktop \
-            --add-flags "--enable-blink-features=MiddleClickAutoscroll"
-        '';
+        postFixup =
+          (oldAttrs.postFixup or "")
+          + ''
+            wrapProgram $out/bin/vesktop \
+              --add-flags "--enable-blink-features=MiddleClickAutoscroll"
+          '';
       });
 
       settings = {
